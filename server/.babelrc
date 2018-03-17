@@ -1,8 +1,7 @@
 {
     "presets": [
         "react",
-        "es2015",
-        "es2017",
+        "env",
         "stage-2"
     ],
     "plugins": [
@@ -12,7 +11,7 @@
         "production": {
             "presets": [
                 [
-                    "es2015",
+                    "env",
                     {
                         "modules": false
                     }
