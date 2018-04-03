@@ -34,15 +34,6 @@ module.exports = {
             {
                 test: /\.node$/,
                 use: 'node-loader',
-            },
-            {
-                test: /\.(html)$/,
-                use: {
-                    loader: 'html-loader',
-                    options: {
-                        attrs: [':data-src']
-                    }
-                }
             }
         ],
     },

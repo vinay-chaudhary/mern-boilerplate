@@ -1,9 +1,7 @@
-import Helmet from 'react-helmet';
 import path from 'path';
-import html from '../../../client/build/index.html';
+// import html from '../../../client/build/index.html';
 // Render Initial HTML
 const renderFullPage = (decoded) => {
-  const head = Helmet.rewind();
 
   return `
     <!doctype html>
@@ -21,7 +19,7 @@ export default function (req, res) {
   if (process.env.NODE_ENV === 'production') {
     return res.set('Content-Type', 'text/html')
       .status(200)
-      .end(html);
+      .sendFile(path.resolve(__dirname, '../../client/build/index.html'));
   }
   res
     .set('Content-Type', 'text/html')

@@ -1,25 +1,9 @@
 {
     "presets": [
-        "react",
         "env",
-        "stage-2"
+        "stage-3"
     ],
     "plugins": [
         "react-hot-loader/babel"
-    ],
-    "env": {
-        "production": {
-            "presets": [
-                [
-                    "env",
-                    {
-                        "modules": false
-                    }
-                ],
-                "react",
-                "react-optimize",
-                "stage-2"
-            ]
-        }
-    }   
+    ]
 }

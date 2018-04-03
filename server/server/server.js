@@ -4,7 +4,7 @@ import Express from 'express';
 import path from 'path';
 
 // Mongoose Conguration
-import './db';
+// import './db';
 
 
 import initialRendering from './utils/ssr';
@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // Server Side Rendering based on routes matched by React-router.
-app.use(initialRendering);
+app.use('/ *',initialRendering);
 
 // start app
 const server = app.listen(process.env.PORT || 9000, (error) => {
